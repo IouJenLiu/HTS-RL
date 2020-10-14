@@ -1,1 +1,292 @@
-123
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		        15px 15px 0 0px #fff, /* The fourth layer */
+		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		        20px 20px 0 0px #fff, /* The fifth layer */
+		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		        25px 25px 0 0px #fff, /* The fifth layer */
+		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+  <head>
+		<title>High-Throughput Synchronous Deep RL</title>
+		<meta property="og:title" content="High-Throughput Synchronous Deep RL " />
+  </head>
+
+  <body>
+    <br>
+          <center>
+          	<span style="font-size:42px">High-Throughput Synchronous Deep RL</span>
+	  		  <table align=center width=600px>
+	  			  <tr>
+	  	              <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:24px"><a href="https://ioujenliu.github.io/">Iou-Jen Liu</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:24px"><a href="http://www.isle.illinois.edu/~yeh17/">Raymond Yeh</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:24px"><a href="https://www.alexander-schwing.de/">Alexander Schwing</a></span>
+		  		  		</center>
+		  		  	  </td>
+			  </table>
+          	<table align=center width=650px>
+	  			  <tr>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:24px"><a href='https://github.com/IouJenLiu/HTS-RL'> [Code]</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:24px"><a href=''> [Talk]</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:24px"><a href=''> [Slides]</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:24px"><a href=''> [Paper]</a></span>
+		  		  		</center>
+		  		  	  </td>
+
+	  	              <td align=center width=150px>
+	  					<center>
+	  						<span style="font-size:24px"><a href=''> [Poster]</a></span>
+		  		  		</center>
+		  		  	  </td>
+
+		  		  	 </tr>
+	  			  <tr>
+			  </table>
+
+	  		  
+	  		  
+          </center>
+
+<!--   		  <br><br>
+		  <hr> -->
+
+  		  <br>
+  		  <table align=center width=850px>
+  			  <tr>
+  	              <td width=400px>
+  					<center>
+  	                	<a href="./figs/flow_all_v3.png"><img class="rounded" src = "./figs/flow_all_v3.png" height="360px"></img></href></a><br>
+					</center>
+  	              </td>
+                </tr>
+  	              <td width=300px>
+  					<center>
+  	                	<span style="font-size:14px"><i></i>
+					</center>
+  	              </td>
+
+  		  </table>
+
+      	  <br>
+		  <hr>
+
+
+  		  <table align=center width=850px>
+	  		  <center><h1>Abstract</h1></center>
+	  		  
+			</table>
+
+					Various parallel actor-learner methods reduce long training times for deep reinforcement learning. Synchronous methods enjoy training stability while having lower data throughput. In contrast, asynchronous methods achieve high throughput but suffer from stability issues and lower sample efficiency due to ‘stale policies’. To combine the advantages of both methods we propose High-Throughput Synchronous Deep Reinforcement Learning (HTS-RL). In HTS-RL, we perform learning and rollouts concurrently, devise a system design which avoids ‘stale policies’ and ensure that actors interact with environment replicas in an asynchronous manner while maintaining full determinism. We evaluate our approach on Atari games and the Google Research Football environment. Compared to synchronous baselines, HTS-RL is 2 − 6X faster. Compared to state-of-the-art asynchronous methods, HTS-RL has competitive throughput and consistently achieves higher average episode rewards.
+
+<!-- 					Given a grayscale photograph as input, this paper attacks the problem of hallucinating a <i>plausible</i> color version of the photograph. This problem is clearly underconstrained, so previous approaches have either relied on significant user interaction or resulted in desaturated colorizations. We propose a fully automatic approach that produces vibrant and realistic colorizations. We embrace the underlying uncertainty of the problem by posing it as a classification task and explore using class-rebalancing at training time to increase the diversity of colors in the result. The system is implemented as a feed-forward operation in a CNN at test time and is trained on over a million color images. We evaluate our algorithm using a "colorization Turing test", asking human subjects to choose between a generated and ground truth color image. Our method successfully fools humans 20% of the time, significantly higher than previous methods. -->
+
+  		  <br><br>
+
+
+
+
+	  <!-- NETWORK ARCHITECTURE, TRY THE MODEL -->
+ 		
+
+<!-- <a href="http://www.eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v0/colorization_release_v0.caffemodel">[Model 129MB]</span> -->
+
+      	  <br>
+		  <hr>
+		  <table align=center width=1100px>
+	  		 	<center><h1>Videos</h1></center>
+  			  <tr>
+<!--   	              <td width=400px>
+  					<center>
+  	                	<img class="rounded" src = "./index_files/teaser_v3.jpg" height="275px"></img>
+  	                	<br>
+					</center>
+  	              </td> -->
+		  		  <table align=center width=800px>
+		  		    <tr>
+		              <td align=center width=800px>
+						<iframe width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+					  </td>
+					</tr>
+					<tr>
+		              <td align=center width=600px>
+		              <span style="font-size:22px"></span>
+					  </td>
+					</tr>
+				  </table>
+				<br>
+                </tr>
+  		  </table>
+  		  <hr>
+  		  <br>
+
+
+
+  		  <!-- <table align=center width=550px> -->
+  		  <table align=center width=800px>
+	 		<center><h1>References</h1></center>
+  			  <tr>
+  	              <!--<td width=300px align=left>-->
+  	              <!-- <a href="http://arxiv.org/pdf/1603.08511.pdf"> -->
+				  <td><a href="https://arxiv.org/abs/1603.08511"><img class="layered-paper-big" style="height:175px" src="./resources/images/paper_pdf_thumb.png"/></a></td>
+				  <td><span style="font-size:14pt">Iou-Jen Liu, Raymond A. Yeh, Alexander G. Schwing<br>
+				  High-Throughput Synchronous Deep RL.<br>
+				  In NeurIPS, 2020.<br>
+				  
+				  <!-- <td><span style="font-size:14pt">Zhang, Isola, Efros. Colorful Image Colorization. In ECCV, 2016. (hosted on arXiv) -->
+				  <span style="font-size:4pt"><a href="http://arxiv.org/pdf/1603.08511.pdf"><br></a>
+<!-- 				  <span style="font-size:14pt"><br><b>Primary revisions in v2</b>
+				  <span style="font-size:10pt"><br> &bull; ECCV 2016 Camera Ready
+				  <span style="font-size:10pt"><br> &bull; Self-supervision/representation learning experiments (see <b>Section 3.2</b>) -->
+				  <!-- <br> &bull; Loss function comparisons, with all models re-trained from scratch (see <b>Table 1</b>) -->
+				  </span>
+				  </td>
+  	              </td>
+              </tr>
+  		  </table>
+		  <br>
+		  <hr>
+		  <table style="font-size:14px" align=center>
+        <tr>
+        <td>
+            Webpage template adapted from <a href='https://richzhang.github.io/colorization/'>Richard Zhang</a>.
+        </td>
+        </tr>
+        </table>
+		  
+              
+</body>
+</html>
+ 
