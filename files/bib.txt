@@ -1,0 +1,6 @@
+@inproceedings{LiuNEURIPS2020,
+  author = {I.-J. Liu and R. Yeh and A.~G. Schwing},
+  title = {{High-Throughput Synchronous Deep RL}},
+  booktitle = {Proc. NeurIPS},
+  year = {2020},
+}
