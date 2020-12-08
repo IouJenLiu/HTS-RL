@@ -54,6 +54,3 @@ The PPO code is based on the PPO implementation of https://github.com/ikostrikov
 
 ### License
 HTS-RL is licensed under the MIT License
-
-
-
